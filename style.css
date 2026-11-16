@@ -1,0 +1,159 @@
+
+@charset "UTF-8";
+
+/* 全体の設定 */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; color: #292721; background: #f6f3ec; font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif; line-height: 1.9; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+h1,h2,h3,p { margin-top: 0; }
+h1,h2,h3 { font-weight: 500; }
+h1,h2 { font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; }
+em { font-weight: normal; }
+.site-header { position: absolute; top: 0; left: 0; width: 100%; z-index: 10; display: flex; align-items: center; justify-content: space-between; padding: 16px 5%; background: rgba(22,20,18,.65); color: #fff; }
+.header-logo img { width: 86px; height: 55px; object-fit: contain; }
+.site-header nav { display: flex; gap: 36px; }
+.site-header nav a { font-size: 12px; letter-spacing: .18em; padding: 8px 0; border-bottom: 1px solid transparent; }
+.site-header nav a:hover { border-color: #d6c5a2; }
+
+/* トップの大きな写真 */
+.hero { position: relative; min-height: 760px; height: 95vh; max-height: 1050px; background: #1b1511; color: white; overflow: hidden; display: flex; align-items: center; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; }
+.hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(10,9,8,.90) 0%,rgba(10,9,8,.72) 36%,rgba(10,9,8,.17) 100%); }
+.hero-content { position: relative; z-index: 1; width: min(620px, 90%); margin-left: 10%; padding: 105px 0 55px; }
+.hero-small { font-size: 11px; letter-spacing: .38em; color: #ded2b7; margin-bottom: 15px; }
+.hero-logo { width: min(380px, 78%); height: 235px; object-fit: contain; object-position: left center; margin: 0 0 0 -10px; }
+.hero-brand { font-size: 15px; letter-spacing: .13em; margin: -4px 0 28px; }
+.hero h1 { font-size: clamp(36px, 4vw, 66px); line-height: 1.55; letter-spacing: .12em; margin-bottom: 18px; }
+.hero h1 em { color: #e6d4b1; }
+.hero-lead { font-size: 14px; letter-spacing: .09em; margin-bottom: 30px; }
+.outline-button { display: inline-flex; align-items: center; justify-content: space-between; gap: 42px; border: 1px solid #e8dfcc; padding: 13px 24px; font-size: 13px; letter-spacing: .08em; transition: .2s; }
+.outline-button:hover { background: #f5efe2; color: #28231c; }
+.hero-number { position: absolute; bottom: 34px; right: 5%; font-size: 11px; letter-spacing: .24em; z-index: 1; }
+
+/* 共通の見出し */
+.section-wrap { max-width: 1200px; padding: 115px 5%; margin: auto; }
+.eyebrow { font-size: 11px; letter-spacing: .25em; color: #8e574d; font-family: Arial,sans-serif; font-weight: bold; }
+.arrow-link { display: inline-flex; gap: 42px; border-bottom: 1px solid #a8967b; padding-bottom: 8px; font-size: 14px; }
+.arrow-link:hover { color: #8b373b; }
+.welcome { display: grid; grid-template-columns: 1.15fr 1fr; gap: 10%; }
+.welcome h2 { font-size: clamp(32px, 3.5vw, 50px); line-height: 1.6; letter-spacing: .09em; }
+.welcome h2 em { color: #9c4548; }
+.welcome-copy { padding-top: 36px; font-size: 15px; }
+.welcome-copy p { margin-bottom: 20px; }
+.welcome-copy .arrow-link { margin-top: 12px; }
+
+/* 横長の写真 */
+.photo-band { height: 460px; position: relative; overflow: hidden; background: #261a14; }
+.photo-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; filter: brightness(.67); }
+.photo-band div { position: absolute; left: 10%; top: 28%; color: white; }
+.photo-band span { font-size: 12px; letter-spacing: .3em; }
+.photo-band p { font-family: "Yu Mincho",serif; font-size: clamp(32px,4vw,56px); line-height: 1.5; margin-top: 20px; }
+
+/* 料理の非対称レイアウト */
+.section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; }
+.section-heading h2 { font-family: Georgia,serif; font-size: clamp(44px,6vw,78px); line-height: 1.1; letter-spacing: -.04em; }
+.section-heading h2 em { color: #9a454a; }
+.red-dot { color: #a74245; }
+.section-heading > p { font-size: 14px; }
+.feature-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 45px 7%; align-items: start; }
+.feature-card { display: block; }
+.feature-card img { width: 100%; height: 310px; object-fit: cover; transition: transform .3s; }
+.feature-card:hover img { transform: scale(1.015); }
+.feature-large { grid-row: span 2; }
+.feature-large img { height: 620px; }
+.feature-small img { height: 230px; }
+.feature-offset { margin-left: 12%; }
+.feature-no { display: block; color: #9b4d48; font-size: 10px; letter-spacing: .2em; margin-top: 18px; }
+.feature-card h3 { font-family: "Yu Mincho",serif; font-size: 23px; margin: 6px 0; }
+.feature-card p { color: #6f6a62; font-size: 13px; }
+.section-end { margin-top: 45px; }
+
+/* 店内の紹介 */
+.space-section { display: grid; grid-template-columns: 1.05fr .95fr; background: #e8e2d7; }
+.space-photo img { width: 100%; height: 590px; object-fit: cover; }
+.space-copy { align-self: center; padding: 60px 13%; }
+.space-copy h2 { font-size: clamp(30px,3.5vw,48px); line-height: 1.6; }
+.space-copy > p:not(.eyebrow) { font-size: 14px; margin: 25px 0; }
+.bottom-cta { background: #203b30; color: white; padding: 95px 20px; text-align: center; }
+.bottom-cta > p { font-size: 11px; letter-spacing: .3em; }
+.bottom-cta h2 { font-size: clamp(26px,3vw,43px); margin: 18px 0 30px; }
+
+/* 下層ページ */
+.sub-hero { padding: 185px 5% 90px; text-align: center; background: #203b30; color: white; }
+.sub-hero .eyebrow { color: #d3bca3; }
+.sub-hero h1 { font-size: clamp(32px,4vw,55px); margin: 15px 0; }
+.sub-hero span { font-size: 10px; letter-spacing: .25em; }
+.page-content { max-width: 1160px; padding: 70px 5% 100px; margin: auto; }
+.content-shell { width: 100%; }
+.content-shell > h1 { display: none; }
+.content-shell h2 { font-size: clamp(25px,3vw,36px); padding: 0 0 15px; margin: 75px 0 28px; border-bottom: 1px solid #c8b9a5; }
+.content-shell .eyebrow { display: none; }
+.content-shell .section-number { font-size: 10px; color: #995b4c; letter-spacing: .22em; margin-top: 50px; }
+.flex-box { display: flex; align-items: center; gap: 7%; margin: 35px 0 80px; }
+.flex-box:nth-of-type(even) { flex-direction: row-reverse; }
+.flex-text { flex: 1; font-size: 15px; }
+.flex-img { flex: 1; }
+.flex-img img { width: 100%; height: 330px; object-fit: cover; }
+.menu-box { display: grid; grid-template-columns: repeat(3,1fr); gap: 38px 25px; }
+.menu-item img { width: 100%; height: 220px; object-fit: cover; }
+.menu-item h3 { font-family: "Yu Mincho",serif; font-size: 20px; margin: 13px 0 0; }
+.menu-item p { font-size: 13px; margin-bottom: 6px; }
+.price { color: #9b4547; font-weight: bold; }
+.campaign-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 38px; align-items: center; }
+.campaign-box img { grid-row: span 3; width: 100%; height: 330px; object-fit: cover; }
+.campaign-box p { margin: 0; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0 50px; }
+th,td { border-bottom: 1px solid #d8cfc0; padding: 17px 14px; text-align: left; font-size: 14px; }
+th { width: 28%; font-weight: 500; color: #234334; }
+.back-btn-area { text-align: center; margin-top: 75px; }
+.back-btn { display: inline-block; border: 1px solid #234334; padding: 12px 28px; }
+
+/* フッター */
+footer { background: #151d19; color: #eee9df; text-align: center; padding: 60px 20px 35px; }
+.footer-brand { font-family: Georgia,serif; font-size: 30px; }
+footer p { font-size: 12px; margin: 5px 0 22px; }
+.footer-links { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; font-size: 11px; letter-spacing: .1em; }
+footer small { font-size: 11px; color: #a7aca6; }
+
+@media (max-width: 750px) {
+  .site-header { padding: 10px 4%; gap: 10px; }
+  .header-logo img { width: 58px; height: 46px; }
+  .site-header nav { gap: 12px; }
+  .site-header nav a { font-size: 9px; letter-spacing: .02em; }
+  .hero { height: auto; min-height: 740px; }
+  .hero-bg { object-position: 58% center; }
+  .hero-shade { background: linear-gradient(90deg,rgba(10,9,8,.85),rgba(10,9,8,.35)); }
+  .hero-content { margin-left: 6%; width: 88%; padding-top: 120px; }
+  .hero-logo { width: 270px; height: 190px; }
+  .hero h1 { font-size: 37px; }
+  .hero-brand { font-size: 12px; }
+  .section-wrap { padding: 75px 6%; }
+  .welcome { grid-template-columns: 1fr; gap: 10px; }
+  .welcome-copy { padding-top: 0; }
+  .photo-band { height: 330px; }
+  .photo-band div { left: 7%; top: 24%; }
+  .section-heading { align-items: start; flex-direction: column; gap: 5px; }
+  .feature-grid { grid-template-columns: 1fr 1fr; gap: 35px 15px; }
+  .feature-large { grid-column: span 2; grid-row: auto; }
+  .feature-large img { height: 380px; }
+  .feature-small img { height: 190px; }
+  .feature-offset { margin-left: 0; }
+  .feature-card h3 { font-size: 18px; }
+  .space-section { grid-template-columns: 1fr; }
+  .space-photo img { height: 350px; }
+  .space-copy { padding: 60px 7%; }
+  .sub-hero { padding-top: 135px; }
+  .page-content { padding: 35px 6% 75px; }
+  .flex-box,.flex-box:nth-of-type(even) { flex-direction: column-reverse; gap: 20px; align-items: stretch; }
+  .flex-img img { height: 270px; }
+  .menu-box { grid-template-columns: repeat(2,1fr); gap: 25px 14px; }
+  .menu-item img { height: 165px; }
+  .menu-item h3 { font-size: 17px; }
+  .campaign-box { display: block; }
+  .campaign-box img { height: 240px; margin-bottom: 18px; }
+  .campaign-box p { margin-bottom: 12px; }
+  th,td { padding: 12px 8px; font-size: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
