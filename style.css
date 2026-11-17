@@ -1,7 +1,5 @@
-
 @charset "UTF-8";
 
-/* 全体の設定 */
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; color: #292721; background: #f6f3ec; font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif; line-height: 1.9; }
@@ -17,7 +15,6 @@ em { font-weight: normal; }
 .site-header nav a { font-size: 12px; letter-spacing: .18em; padding: 8px 0; border-bottom: 1px solid transparent; }
 .site-header nav a:hover { border-color: #d6c5a2; }
 
-/* トップの大きな写真 */
 .hero { position: relative; min-height: 760px; height: 95vh; max-height: 1050px; background: #1b1511; color: white; overflow: hidden; display: flex; align-items: center; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg,rgba(10,9,8,.90) 0%,rgba(10,9,8,.72) 36%,rgba(10,9,8,.17) 100%); }
@@ -32,7 +29,6 @@ em { font-weight: normal; }
 .outline-button:hover { background: #f5efe2; color: #28231c; }
 .hero-number { position: absolute; bottom: 34px; right: 5%; font-size: 11px; letter-spacing: .24em; z-index: 1; }
 
-/* 共通の見出し */
 .section-wrap { max-width: 1200px; padding: 115px 5%; margin: auto; }
 .eyebrow { font-size: 11px; letter-spacing: .25em; color: #8e574d; font-family: Arial,sans-serif; font-weight: bold; }
 .arrow-link { display: inline-flex; gap: 42px; border-bottom: 1px solid #a8967b; padding-bottom: 8px; font-size: 14px; }
@@ -44,14 +40,12 @@ em { font-weight: normal; }
 .welcome-copy p { margin-bottom: 20px; }
 .welcome-copy .arrow-link { margin-top: 12px; }
 
-/* 横長の写真 */
 .photo-band { height: 460px; position: relative; overflow: hidden; background: #261a14; }
 .photo-band img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; filter: brightness(.67); }
 .photo-band div { position: absolute; left: 10%; top: 28%; color: white; }
 .photo-band span { font-size: 12px; letter-spacing: .3em; }
 .photo-band p { font-family: "Yu Mincho",serif; font-size: clamp(32px,4vw,56px); line-height: 1.5; margin-top: 20px; }
 
-/* 料理の非対称レイアウト */
 .section-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 55px; }
 .section-heading h2 { font-family: Georgia,serif; font-size: clamp(44px,6vw,78px); line-height: 1.1; letter-spacing: -.04em; }
 .section-heading h2 em { color: #9a454a; }
@@ -70,7 +64,6 @@ em { font-weight: normal; }
 .feature-card p { color: #6f6a62; font-size: 13px; }
 .section-end { margin-top: 45px; }
 
-/* 店内の紹介 */
 .space-section { display: grid; grid-template-columns: 1.05fr .95fr; background: #e8e2d7; }
 .space-photo img { width: 100%; height: 590px; object-fit: cover; }
 .space-copy { align-self: center; padding: 60px 13%; }
@@ -80,7 +73,6 @@ em { font-weight: normal; }
 .bottom-cta > p { font-size: 11px; letter-spacing: .3em; }
 .bottom-cta h2 { font-size: clamp(26px,3vw,43px); margin: 18px 0 30px; }
 
-/* 下層ページ */
 .sub-hero { padding: 185px 5% 90px; text-align: center; background: #203b30; color: white; }
 .sub-hero .eyebrow { color: #d3bca3; }
 .sub-hero h1 { font-size: clamp(32px,4vw,55px); margin: 15px 0; }
@@ -102,7 +94,7 @@ em { font-weight: normal; }
 .menu-item p { font-size: 13px; margin-bottom: 6px; }
 .price { color: #9b4547; font-weight: bold; }
 .campaign-box { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 38px; align-items: center; }
-.campaign-box img { grid-row: span 3; width: 100%; height: 330px; object-fit: cover; }
+.campaign-box img {grid-row: span 3; width: 100%; height: auto; object-fit: contain; }
 .campaign-box p { margin: 0; }
 table { width: 100%; border-collapse: collapse; margin: 20px 0 50px; }
 th,td { border-bottom: 1px solid #d8cfc0; padding: 17px 14px; text-align: left; font-size: 14px; }
@@ -110,7 +102,6 @@ th { width: 28%; font-weight: 500; color: #234334; }
 .back-btn-area { text-align: center; margin-top: 75px; }
 .back-btn { display: inline-block; border: 1px solid #234334; padding: 12px 28px; }
 
-/* フッター */
 footer { background: #151d19; color: #eee9df; text-align: center; padding: 60px 20px 35px; }
 .footer-brand { font-family: Georgia,serif; font-size: 30px; }
 footer p { font-size: 12px; margin: 5px 0 22px; }
@@ -152,7 +143,7 @@ footer small { font-size: 11px; color: #a7aca6; }
   .menu-item img { height: 165px; }
   .menu-item h3 { font-size: 17px; }
   .campaign-box { display: block; }
-  .campaign-box img { height: 240px; margin-bottom: 18px; }
+  .campaign-box img { height: auto; margin-bottom: 18px; }
   .campaign-box p { margin-bottom: 12px; }
   th,td { padding: 12px 8px; font-size: 12px; }
 }
